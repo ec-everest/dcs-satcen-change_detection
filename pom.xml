@@ -4,24 +4,24 @@
   <groupId>com.terradue</groupId>
   <artifactId>dcs-satcen-change_detection</artifactId>
   <packaging>pom</packaging>
-  <name>dcs-s2-ndvi-boa</name>
+  <name>dcs-satcen-change_detection</name>
   <parent>
     <groupId>com.terradue</groupId>
     <artifactId>dcs-python-parent</artifactId>
     <version>2.0.0</version>
   </parent>
-  <description>Bottom of Atmosphere NDVI derived from Sentinel-2</description>
-  <version>1.8-SNAPSHOT</version>
+  <description>SatCen Change Detection using Jupyter notebooks</description>
+  <version>1.0-SNAPSHOT</version>
   <properties>
-    <summary>Bottom of Atmosphere NDVI derived from Sentinel-2</summary>
-    <description>Bottom of Atmosphere NDVI derived from Sentinel-2</description>
-    <community>ec-ecopotential</community>
-    <yumRepo>ec-ecopotential</yumRepo>
+    <summary>SatCen Change Detection using Sentinel-1 data and Jupyter notebooks</summary>
+    <description>SatCen Change Detection using Sentinel-1 data and Jupyter notebooks</description>
+    <community>ec-everest</community>
+    <yumRepo>ec-everest</yumRepo>
   </properties>
   <scm>
-    <connection>scm:git:ssh://git@github.com/ec-ecopotential/dcs-s2-ndvi-boa</connection>
-    <developerConnection>scm:git:ssh://git@github.com/ec-ecopotential/dcs-s2-ndvi-boa</developerConnection>
-    <url>https://github.com/ec-ecopotential/dcs-s2-ndvi-boa</url>
+    <connection>scm:git:ssh://git@github.com/ec-everest/dcs-satcen-change_detection</connection>
+    <developerConnection>scm:git:ssh://git@github.com/ec-everest/dcs-satcen-change_detection</developerConnection>
+    <url>https://github.com/ec-everest/dcs-satcen-change_detection</url>
     <tag>HEAD</tag>
   </scm>
   <profiles>
