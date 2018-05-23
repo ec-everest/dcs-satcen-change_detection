@@ -1,0 +1,21 @@
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="application">
+  <jobTemplates>
+    <jobTemplate id="notebook">
+      <streamingExecutable>/application/notebook/run</streamingExecutable>
+      <defaultParameters><parameter id="aoi_wkt" title="Area of nterest" abstract="Area of interest expressed as a WKT polygon" maxOccurs="1" scope="runtime" type="LiteralData">POLYGON((-3.611068725585937 40.57602136929037,-3.611068725585937 40.42669550575275,-3.4047317504882812 40.42669550575275,-3.4047317504882812 40.57602136929037,-3.611068725585937 40.57602136929037))</parameter><parameter id="polarization" title="Sentinel-1 polarization" abstract="Sentinel-1 polarization (e.g. VH)" maxOccurs="1" scope="runtime" type="LiteralData">VH</parameter></defaultParameters>
+     <defaultJobconf>
+        <property id="mapred.task.timeout">9900000000000</property>
+        <property id="ciop.job.max.tasks">1</property>
+      </defaultJobconf>
+    </jobTemplate>
+  </jobTemplates>
+  <workflow id="satcen-change-detection" title="SatCen Change Detection" abstract="SatCen Change Detection using SNAP and Sentinel-1 data">
+    <workflowVersion>1.0</workflowVersion>
+    <node id="notebook">
+      <job id="notebook"/>
+      <sources>
+        <source id="source" title="Input references" abstract="Input references" refid="string:list" scope="runtime">https://catalog.terradue.com/sentinel1/search?uid=S1A_IW_GRDH_1SDV_20180312T061753_20180312T061818_020978_024034_457D,https://catalog.terradue.com/sentinel1/search?uid=S1A_IW_GRDH_1SDV_20180216T061753_20180216T061818_020628_02351B_9F18</source>
+      </sources>
+    </node>
+  </workflow>
+</application>
